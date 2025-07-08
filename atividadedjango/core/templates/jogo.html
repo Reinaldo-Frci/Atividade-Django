@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <h1>Jogo: Adivinhe o Número Secreto (de 1 a 100)</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="number" name="tentativa" required placeholder="Digite um número">
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if mensagem %}
+        <p><strong>{{ mensagem }}</strong></p>
+    {% endif %}
+</body>
+</html>
