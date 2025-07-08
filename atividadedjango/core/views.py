@@ -8,13 +8,13 @@ def homepage(request):
 
 def jogo_adivinhacao(request):
     mensagem = ''
-    numero_secreto = 85  # número fixo para facilitar no início
-
+    request.session['numero_secreto'] = random.randint(0, 100)
+    numero = request.session['numero_secreto']
     if request.method == 'POST':
         tentativa = int(request.POST.get('tentativa'))
-        if tentativa == numero_secreto:
+        if tentativa == numero:
             mensagem = 'Parabéns! Você acertou!'
-        elif tentativa > numero_secreto:
+        elif tentativa > numero:
             mensagem = 'Tente um número menor.'
         else:
             mensagem = 'Tente um número maior.'
