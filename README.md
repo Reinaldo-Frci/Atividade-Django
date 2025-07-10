@@ -16,5 +16,4 @@ Este é um jogo web criado com Django como parte do curso Programação de Aplic
 ## Autores
 - Reinaldo Ferrianci – Aluno(a) do SENAI
 
-## Licença
-Este projeto está licenciado sob a Licença MIT.
+
